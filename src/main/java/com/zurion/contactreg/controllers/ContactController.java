@@ -1,6 +1,7 @@
 package com.zurion.contactreg.controllers;
 
 import com.zurion.contactreg.models.dto.ContactDTO;
+import com.zurion.contactreg.models.dto.ResponseObject;
 import com.zurion.contactreg.models.request.ContactModel;
 import com.zurion.contactreg.services.ContactService;
 import lombok.RequiredArgsConstructor;
@@ -18,25 +19,42 @@ public class ContactController {
     private final ContactService contactService;
 
     @PostMapping
-    public ContactDTO addContact(@RequestBody ContactModel model) {
+    public ResponseEntity<ResponseObject> addContact(@RequestBody ContactModel model) {
 
-        return contactService.add(model);
+        return ResponseEntity.ok(ResponseObject.builder()
+                .data(contactService.add(model))
+                .success(true)
+                .message("Contact added successfully")
+                .build());
+
     }
 
     @PutMapping
-    public ContactDTO updateContact(@RequestBody ContactModel model) {
-        return contactService.update(model);
+    public ResponseEntity<ResponseObject> updateContact(@RequestBody ContactModel model) {
+        return ResponseEntity.ok(ResponseObject.builder()
+                .data(contactService.update(model))
+                .success(true)
+                .message("Contact updated successfully")
+                .build());
     }
 
     @GetMapping("/{id}")
-    public ContactDTO findById(@PathVariable Long id) {
-        return contactService.findById(id);
+    public ResponseEntity<ResponseObject> findById(@PathVariable Long id) {
+        return ResponseEntity.ok(ResponseObject.builder()
+                .data(contactService.findById(id))
+                .success(true)
+                .message("Successfully Fetched Contact by ID")
+                .build());
     }
 
     @GetMapping("all")
-    public List<ContactDTO> getAllContacts(@RequestParam(required = false) Integer page,
-                                           @RequestParam(required = false) Integer size) {
-        return contactService.findAll(page, size);
+    public ResponseEntity<ResponseObject> getAllContacts(@RequestParam(required = false) Integer page,
+                                                         @RequestParam(required = false) Integer size) {
+        return ResponseEntity.ok(ResponseObject.builder()
+                .data(contactService.findAll(page, size))
+                .success(true)
+                .message("Successfully fetched all contacts")
+                .build());
     }
 
     @DeleteMapping("/{id}")
@@ -45,21 +63,33 @@ public class ContactController {
         return ResponseEntity.noContent().build();
     }
 
-    @PostMapping("/search/phoneHash")
-    public ContactDTO searchByPhoneHash(@RequestParam String phoneHash) {
-        return contactService.searchByPhoneHash(phoneHash);
+    @GetMapping("/search/phoneHash")
+    public ResponseEntity<ResponseObject> searchByPhoneHash(@RequestParam String phoneHash) {
+        return ResponseEntity.ok(ResponseObject.builder()
+                .data(contactService.searchByPhoneHash(phoneHash))
+                .success(true)
+                .message("Successfully fetched by Phone Hash")
+                .build());
     }
 
-    @PostMapping("/search/masked")
-    public ContactDTO searchByMaskedDetails(@RequestParam String maskedName,
-                                            @RequestParam String maskedPhone) {
-        return contactService.searchByMaskedDetails(maskedName, maskedPhone);
+    @GetMapping("/search/masked")
+    public ResponseEntity<ResponseObject> searchByMaskedDetails(@RequestParam String maskedName,
+                                                                @RequestParam String maskedPhone) {
+        return ResponseEntity.ok(ResponseObject.builder()
+                .data(contactService.searchByMaskedDetails(maskedName, maskedPhone))
+                .success(true)
+                .message("Successfully fetched by Masked Details")
+                .build());
     }
 
-    @PostMapping("/search/organization")
-    public List<ContactDTO> searchByOrganization(@RequestParam String organizationName) {
+    @GetMapping("/search/organization")
+    public ResponseEntity<ResponseObject> searchByOrganization(@RequestParam String organizationName) {
 
-        return contactService.findByOrganization(organizationName);
+        return ResponseEntity.ok(ResponseObject.builder()
+                .data(contactService.findByOrganization(organizationName))
+                .success(true)
+                .message("Successfully fetched by Organization")
+                .build());
     }
 
 }

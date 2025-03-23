@@ -23,6 +23,7 @@ public class ContactEntity extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String fullName;
+    @Column(unique = true)
     private String phoneNumber;
     private String email;
     private String idNumber;
