@@ -16,9 +16,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 /**
  * <p>Java class for Contact complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="Contact">
  *   &lt;complexContent>
@@ -40,22 +40,20 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Contact", propOrder = {
-    "id",
-    "fullName",
-    "phoneNumber",
-    "email",
-    "idNumber",
-    "dateOfBirth",
-    "gender",
-    "organization",
-    "maskedName",
-    "maskedPhoneNumber",
-    "hashedPhoneNumber"
+        "id",
+        "fullName",
+        "phoneNumber",
+        "email",
+        "idNumber",
+        "dateOfBirth",
+        "gender",
+        "organization",
+        "maskedName",
+        "maskedPhoneNumber",
+        "hashedPhoneNumber"
 })
 public class Contact {
 
@@ -84,7 +82,6 @@ public class Contact {
 
     /**
      * Gets the value of the id property.
-     * 
      */
     public long getId() {
         return id;
@@ -92,7 +89,6 @@ public class Contact {
 
     /**
      * Sets the value of the id property.
-     * 
      */
     public void setId(long value) {
         this.id = value;
@@ -100,11 +96,9 @@ public class Contact {
 
     /**
      * Gets the value of the fullName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getFullName() {
         return fullName;
@@ -112,11 +106,9 @@ public class Contact {
 
     /**
      * Sets the value of the fullName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setFullName(String value) {
         this.fullName = value;
@@ -124,11 +116,9 @@ public class Contact {
 
     /**
      * Gets the value of the phoneNumber property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getPhoneNumber() {
         return phoneNumber;
@@ -136,11 +126,9 @@ public class Contact {
 
     /**
      * Sets the value of the phoneNumber property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setPhoneNumber(String value) {
         this.phoneNumber = value;
@@ -148,11 +136,9 @@ public class Contact {
 
     /**
      * Gets the value of the email property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getEmail() {
         return email;
@@ -160,11 +146,9 @@ public class Contact {
 
     /**
      * Sets the value of the email property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setEmail(String value) {
         this.email = value;
@@ -172,11 +156,9 @@ public class Contact {
 
     /**
      * Gets the value of the idNumber property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getIdNumber() {
         return idNumber;
@@ -184,11 +166,9 @@ public class Contact {
 
     /**
      * Sets the value of the idNumber property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setIdNumber(String value) {
         this.idNumber = value;
@@ -196,11 +176,9 @@ public class Contact {
 
     /**
      * Gets the value of the dateOfBirth property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @return possible object is
+     * {@link XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getDateOfBirth() {
         return dateOfBirth;
@@ -208,11 +186,9 @@ public class Contact {
 
     /**
      * Sets the value of the dateOfBirth property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link XMLGregorianCalendar }
      */
     public void setDateOfBirth(XMLGregorianCalendar value) {
         this.dateOfBirth = value;
@@ -220,11 +196,9 @@ public class Contact {
 
     /**
      * Gets the value of the gender property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getGender() {
         return gender;
@@ -232,11 +206,9 @@ public class Contact {
 
     /**
      * Sets the value of the gender property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setGender(String value) {
         this.gender = value;
@@ -244,11 +216,9 @@ public class Contact {
 
     /**
      * Gets the value of the organization property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getOrganization() {
         return organization;
@@ -256,11 +226,9 @@ public class Contact {
 
     /**
      * Sets the value of the organization property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setOrganization(String value) {
         this.organization = value;
@@ -268,11 +236,9 @@ public class Contact {
 
     /**
      * Gets the value of the maskedName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getMaskedName() {
         return maskedName;
@@ -280,11 +246,9 @@ public class Contact {
 
     /**
      * Sets the value of the maskedName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setMaskedName(String value) {
         this.maskedName = value;
@@ -292,11 +256,9 @@ public class Contact {
 
     /**
      * Gets the value of the maskedPhoneNumber property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getMaskedPhoneNumber() {
         return maskedPhoneNumber;
@@ -304,11 +266,9 @@ public class Contact {
 
     /**
      * Sets the value of the maskedPhoneNumber property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setMaskedPhoneNumber(String value) {
         this.maskedPhoneNumber = value;
@@ -316,11 +276,9 @@ public class Contact {
 
     /**
      * Gets the value of the hashedPhoneNumber property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getHashedPhoneNumber() {
         return hashedPhoneNumber;
@@ -328,11 +286,9 @@ public class Contact {
 
     /**
      * Sets the value of the hashedPhoneNumber property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setHashedPhoneNumber(String value) {
         this.hashedPhoneNumber = value;

@@ -33,14 +33,6 @@ public class SoapWebServiceConfig {
         return wsdl11Definition;
     }
 
-//    @Bean
-//    public XsdSchemaCollection schemaCollection() {
-//        CommonsXsdSchemaCollection commonsXsdSchemaCollection = new CommonsXsdSchemaCollection(
-//                new ClassPathResource("contacts.xsd"));
-//        commonsXsdSchemaCollection.setInline(true);
-//        return commonsXsdSchemaCollection;
-//    }
-
     @Bean
     public XsdSchema contactsSchema() {
         return new SimpleXsdSchema(new org.springframework.core.io.ClassPathResource("xsd/contacts.xsd"));

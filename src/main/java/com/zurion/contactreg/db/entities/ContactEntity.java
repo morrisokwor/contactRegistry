@@ -2,15 +2,12 @@ package com.zurion.contactreg.db.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.UuidGenerator;
 import org.hibernate.annotations.Where;
-
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.time.LocalDate;
 import java.util.Random;
-import java.util.UUID;
 
 
 @Getter
